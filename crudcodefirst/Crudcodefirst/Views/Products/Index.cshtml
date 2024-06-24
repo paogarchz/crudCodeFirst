@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Crudcodefirst.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<title>Tienda Buena Vista</title>
+ㅤ
+ㅤ
+
+<p>
+    @Html.ActionLink("Crear Producto", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remarks)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary btnSyle" }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.ProductID }, new { @class = "btn btn-success btnSyle" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.ProductID }, new { @class = "btn btn-danger btnSyle " })
+            </td>
+        </tr>
+    }
+
+</table>

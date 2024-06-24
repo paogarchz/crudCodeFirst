@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+   
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/Content/css/CustomCSS.css" rel="stylesheet" />
+    <link href="~/Content/css/style_tienda.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Content/images/buenavista.png">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                @Html.ActionLink("Tienda Buena Vista", "Index", "Products", new { area = "" }, new { @class = "navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center" })
+            </div>
+            <div class="col-lg-9">
+                <div class="row bg-dark d-none d-lg-flex">
+                    <div class="col-lg-7 text-left text-white">
+                        <div class="h-100 d-inline-flex align-items-center border-right border-primary py-2 px-3">
+                            <small>Abarrotes</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>7721670112</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center pr-2">
+                            <a class="text-primary p-2" href="https://www.facebook.com/profile.php?id=100008829105634&mibextid=ZbWKwL">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            ㅤ
+                            <a class "text-primary p-2" href="https://mx.linkedin.com/?src=go-pa&trk=sem-ga_campid.19001150288_asid.143806640876_crid.636777052012_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1010068&mcid=7000592715335761922&cid=&gclid=Cj0KCQjw0vWnBhC6ARIsAJpJM6fh8BR6VjvgGK_WzK9KD4YSxy87JKUKvmNmdJtvT_gINXv7M2ANli8aAtYbEALw_wcB&gclsrc=aw.ds">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            ㅤ
+                            <a class "text-primary p-2" href="https://instagram.com/paolagarchz?igshid=NTc4MTIwNjQ2YQ==">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary">Tienda Buena Vista</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navbarCollapse">
+                        <ul class="navbar-nav flex-grow-1">
+                           
+                            <li>@Html.ActionLink("Productos", "Index", "Products", new { area = "" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Contenido de tu aplicación ASP.NET -->
+    <div class="container body-content">
+        <!-- Incluye aquí el contenido de tu aplicación ASP.NET -->
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    <!-- Incluye las rutas de JavaScript de tu aplicación ASP.NET aquí -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
